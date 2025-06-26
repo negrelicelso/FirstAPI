@@ -1,0 +1,39 @@
+@rootURL = http://localhost:5008
+
+GET {{rootURL}}/weatherforecast/
+Accept: application/json
+
+###
+
+GET {{rootURL}}/api/books
+Accept: application/json
+
+###
+
+GET {{rootURL}}/api/books/1
+Accept: application/json
+
+###
+
+POST {{rootURL}}/api/books
+Content-Type: application/json
+{
+  "title": "Ordem Paranormal: Desconjuração - Parte 1",
+  "author": "Fabio Yabu",
+  "yearPublished": 2025
+}
+
+###
+
+PUT {{rootURL}}/api/books/1
+Content-Type: application/json
+{
+  "id": 1,
+  "title": "Ordem Paranormal: Iniciação",
+  "author": "Fabio Yabu",
+  "yearPublished": 2022
+}
+
+###
+
+DELETE {{rootURL}}/api/books/4
